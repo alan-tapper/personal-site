@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+---
+
+<Base title="Projects — Your Name" description="Things I've built">
+  <h1 class="text-2xl font-semibold mb-10">Projects</h1>
+
+  <ul class="space-y-10">
+    {projects.map((project) => (
+      <li>
+        <a href={`/projects/${project.id}`} class="group block">
+          <div class="flex items-baseline gap-3 mb-1">
+            <span class="font-medium group-hover:text-gray-500 transition-colors">
+              {project.data.title}
+            </span>
+            {project.data.featured && (
+              <span class="text-xs text-gray-400 border border-gray-200 rounded px-1.5 py-0.5">
+                featured
+              </span>
+            )}
+          </div>
+          <p class="text-sm text-gray-500 mb-2">{project.data.description}</p>
+          <ul class="flex flex-wrap gap-2">
+            {project.data.tech.map((t) => (
+              <li class="text-xs text-gray-400 bg-gray-50 rounded px-2 py-1">{t}</li>
+            ))}
+          </ul>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>

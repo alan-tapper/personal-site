@@ -1,17 +1,77 @@
 ---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
 
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const featured = await getCollection('projects', ({ data }) => data.featured);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Your Name">
+  <section class="mb-20">
+    <h1 class="text-2xl font-semibold mb-3">Your Name</h1>
+    <p class="text-gray-600 leading-relaxed max-w-prose">
+      A short bio or tagline goes here. What you work on, what you care about,
+      and where you're based. Keep it to two or three sentences.
+    </p>
+    <div class="mt-6 flex gap-4 text-sm">
+      <a href="https://github.com" class="text-gray-500 hover:text-gray-900 transition-colors">GitHub</a>
+      <a href="https://twitter.com" class="text-gray-500 hover:text-gray-900 transition-colors">Twitter</a>
+      <a href="mailto:you@example.com" class="text-gray-500 hover:text-gray-900 transition-colors">Email</a>
+    </div>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="mb-20">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">Projects</h2>
+      <ul class="space-y-6">
+        {featured.map((project) => (
+          <li>
+            <a href={`/projects/${project.id}`} class="group block">
+              <div class="flex items-baseline justify-between">
+                <span class="font-medium group-hover:text-gray-500 transition-colors">
+                  {project.data.title}
+                </span>
+                <span class="text-xs text-gray-400 ml-4 shrink-0">
+                  {project.data.tech.slice(0, 2).join(', ')}
+                </span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1">{project.data.description}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a href="/projects" class="mt-6 inline-block text-sm text-gray-400 hover:text-gray-900 transition-colors">
+        All projects →
+      </a>
+    </section>
+  )}
+
+  {posts.length > 0 && (
+    <section>
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">Writing</h2>
+      <ul class="space-y-5">
+        {posts.map((post) => (
+          <li>
+            <a href={`/blog/${post.id}`} class="group flex items-baseline justify-between">
+              <span class="font-medium group-hover:text-gray-500 transition-colors">
+                {post.data.title}
+              </span>
+              <time
+                datetime={post.data.date.toISOString()}
+                class="text-sm text-gray-400 ml-4 shrink-0"
+              >
+                {post.data.date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+              </time>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a href="/blog" class="mt-6 inline-block text-sm text-gray-400 hover:text-gray-900 transition-colors">
+        All posts →
+      </a>
+    </section>
+  )}
+</Base>
