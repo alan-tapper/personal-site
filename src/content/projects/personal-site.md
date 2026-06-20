@@ -2,7 +2,7 @@
 title: Personal Site
 description: This site — built with Astro and deployed on Vercel.
 tech: [Astro, Tailwind CSS, TypeScript]
-repo: https://github.com/yourusername/personal-site
+repo: https://github.com/alan-tapper/personal-site
 featured: true
 ---
 
