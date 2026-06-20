@@ -11,12 +11,12 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Base title={`${post.data.title} — Your Name`} description={post.data.description}>
+<Base title={`${post.data.title} — Alan Tapper`} description={post.data.description}>
   <article>
     <header class="mb-10">
       <time
         datetime={post.data.date.toISOString()}
-        class="text-sm text-gray-400"
+        class="text-sm text-gray-400 dark:text-gray-500"
       >
         {post.data.date.toLocaleDateString('en-US', {
           month: 'long',
@@ -25,15 +25,15 @@ const { Content } = await render(post);
         })}
       </time>
       <h1 class="text-2xl font-semibold mt-2">{post.data.title}</h1>
-      <p class="text-gray-500 mt-2">{post.data.description}</p>
+      <p class="text-gray-500 dark:text-gray-400 mt-2">{post.data.description}</p>
     </header>
 
-    <div class="prose prose-gray max-w-none">
+    <div class="prose prose-gray dark:prose-invert max-w-none">
       <Content />
     </div>
   </article>
 
-  <a href="/blog" class="mt-12 inline-block text-sm text-gray-400 hover:text-gray-900 transition-colors">
+  <a href="/blog" class="mt-12 inline-block text-sm text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
     ← Back to blog
   </a>
 </Base>

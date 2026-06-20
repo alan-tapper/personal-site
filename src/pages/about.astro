@@ -5,7 +5,7 @@ import Base from '../layouts/Base.astro';
 <Base title="About — Alan Tapper" description="About Alan Tapper">
   <h1 class="text-2xl font-semibold mb-10">About</h1>
 
-  <div class="prose prose-gray max-w-none space-y-6 text-gray-600 leading-relaxed">
+  <div class="prose prose-gray dark:prose-invert max-w-none space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
     <p>
       I'm a Software Engineer at the AT&T AI Foundry, where I architect and develop a scalable
       AI-powered fault resolution workflow serving 2.5 million business customers. My work sits
@@ -30,17 +30,17 @@ import Base from '../layouts/Base.astro';
     </p>
   </div>
 
-  <div class="mt-12 border-t border-gray-100 pt-10">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-8">Experience</h2>
+  <div class="mt-12 border-t border-gray-100 dark:border-gray-800 pt-10">
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-8">Experience</h2>
     <div class="space-y-10">
 
       <div>
         <div class="flex items-baseline justify-between mb-1">
-          <span class="font-medium text-gray-900">Software Engineer</span>
-          <span class="text-xs text-gray-400 shrink-0 ml-4">Jul 2024 – present</span>
+          <span class="font-medium text-gray-900 dark:text-gray-100">Software Engineer</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500 shrink-0 ml-4">Jul 2024 – present</span>
         </div>
-        <div class="text-sm text-gray-500 mb-3">AT&T AI Foundry — Atlanta, GA</div>
-        <ul class="space-y-2 text-sm text-gray-600 list-disc list-outside ml-4">
+        <div class="text-sm text-gray-500 dark:text-gray-400 mb-3">AT&T AI Foundry — Atlanta, GA</div>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc list-outside ml-4">
           <li>Led architecture and development of an AI-powered customer support platform serving 2.5M business customers and processing 300K+ incidents monthly; projected to save ~$20M annually.</li>
           <li>Architected agentic workflows in Python and LangGraph to analyze network diagnostics, identify root causes, and resolve issues automatically.</li>
           <li>Led a major rewrite of a platform's core business logic, improving test-plan accuracy from ~80% to 98% — contributing to ~$100M in projected business value.</li>
@@ -51,11 +51,11 @@ import Base from '../layouts/Base.astro';
 
       <div>
         <div class="flex items-baseline justify-between mb-1">
-          <span class="font-medium text-gray-900">Software Developer Intern</span>
-          <span class="text-xs text-gray-400 shrink-0 ml-4">May – Aug 2023</span>
+          <span class="font-medium text-gray-900 dark:text-gray-100">Software Developer Intern</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500 shrink-0 ml-4">May – Aug 2023</span>
         </div>
-        <div class="text-sm text-gray-500 mb-3">Paycom — Grapevine, TX</div>
-        <ul class="space-y-2 text-sm text-gray-600 list-disc list-outside ml-4">
+        <div class="text-sm text-gray-500 dark:text-gray-400 mb-3">Paycom — Grapevine, TX</div>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc list-outside ml-4">
           <li>Built an internal Territory Visualization Tool (React/TS, PHP/Mezzio, MySQL) that eliminated sensitive data exports to vendors and improved sales territory precision 600x.</li>
           <li>Created analytics and reporting capabilities to help balance sales representatives' workloads.</li>
         </ul>
@@ -63,11 +63,11 @@ import Base from '../layouts/Base.astro';
 
       <div>
         <div class="flex items-baseline justify-between mb-1">
-          <span class="font-medium text-gray-900">Automations Developer Intern</span>
-          <span class="text-xs text-gray-400 shrink-0 ml-4">May – Aug 2022</span>
+          <span class="font-medium text-gray-900 dark:text-gray-100">Automations Developer Intern</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500 shrink-0 ml-4">May – Aug 2022</span>
         </div>
-        <div class="text-sm text-gray-500 mb-3">Altium Packaging — Atlanta, GA</div>
-        <ul class="space-y-2 text-sm text-gray-600 list-disc list-outside ml-4">
+        <div class="text-sm text-gray-500 dark:text-gray-400 mb-3">Altium Packaging — Atlanta, GA</div>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc list-outside ml-4">
           <li>Automated user management, approval workflows, security policy enforcement, and reporting for internal financial systems using UiPath RPA.</li>
           <li>Produced network architecture diagrams, video demos, and software documentation.</li>
         </ul>
@@ -76,35 +76,35 @@ import Base from '../layouts/Base.astro';
     </div>
   </div>
 
-  <div class="mt-12 border-t border-gray-100 pt-10">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">Skills</h2>
-    <dl class="space-y-3 text-sm text-gray-600">
+  <div class="mt-12 border-t border-gray-100 dark:border-gray-800 pt-10">
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">Skills</h2>
+    <dl class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
       <div class="flex gap-4">
-        <dt class="w-32 shrink-0 text-gray-400">Languages</dt>
+        <dt class="w-32 shrink-0 text-gray-400 dark:text-gray-500">Languages</dt>
         <dd>Python, Java, JavaScript / TypeScript, SQL</dd>
       </div>
       <div class="flex gap-4">
-        <dt class="w-32 shrink-0 text-gray-400">Backend</dt>
+        <dt class="w-32 shrink-0 text-gray-400 dark:text-gray-500">Backend</dt>
         <dd>REST / SOAP APIs, concurrent systems, OOP design patterns</dd>
       </div>
       <div class="flex gap-4">
-        <dt class="w-32 shrink-0 text-gray-400">Frameworks</dt>
+        <dt class="w-32 shrink-0 text-gray-400 dark:text-gray-500">Frameworks</dt>
         <dd>FastAPI, Angular, LangGraph, LaunchDarkly</dd>
       </div>
       <div class="flex gap-4">
-        <dt class="w-32 shrink-0 text-gray-400">AI / ML</dt>
+        <dt class="w-32 shrink-0 text-gray-400 dark:text-gray-500">AI / ML</dt>
         <dd>RAG, vector embeddings, agentic orchestration, model evaluation, prompt engineering, monitoring</dd>
       </div>
       <div class="flex gap-4">
-        <dt class="w-32 shrink-0 text-gray-400">DevOps</dt>
+        <dt class="w-32 shrink-0 text-gray-400 dark:text-gray-500">DevOps</dt>
         <dd>Docker, Kubernetes, Azure DevOps, Git</dd>
       </div>
     </dl>
   </div>
 
-  <div class="mt-10 border-t border-gray-100 pt-10">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">Now</h2>
-    <ul class="space-y-2 text-sm text-gray-600">
+  <div class="mt-10 border-t border-gray-100 dark:border-gray-800 pt-10">
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">Now</h2>
+    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
       <li>Working on: AI fault resolution at AT&T AI Foundry</li>
       <li>Teaching: tutoring in Math, CS, Physics, Chemistry, and Latin</li>
       <li>Playing: soccer, water polo, ultimate frisbee, table tennis</li>
@@ -113,11 +113,11 @@ import Base from '../layouts/Base.astro';
   </div>
 
   <div class="mt-10">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">Links</h2>
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">Links</h2>
     <ul class="space-y-2 text-sm">
-      <li><a href="https://github.com/alan-tapper" class="text-gray-600 hover:text-gray-900 transition-colors">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/alan-tapper/" class="text-gray-600 hover:text-gray-900 transition-colors">LinkedIn</a></li>
-      <li><a href="mailto:tapper.alan@gmail.com" class="text-gray-600 hover:text-gray-900 transition-colors">Email</a></li>
+      <li><a href="https://github.com/alan-tapper" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/alan-tapper/" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">LinkedIn</a></li>
+      <li><a href="mailto:tapper.alan@gmail.com" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Email</a></li>
     </ul>
   </div>
 </Base>

@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
 ---
 
-<Base title="Projects — Your Name" description="Things I've built">
+<Base title="Projects — Alan Tapper" description="Things I've built">
   <h1 class="text-2xl font-semibold mb-10">Projects</h1>
 
   <ul class="space-y-10">
@@ -13,19 +13,19 @@ const projects = await getCollection('projects');
       <li>
         <a href={`/projects/${project.id}`} class="group block">
           <div class="flex items-baseline gap-3 mb-1">
-            <span class="font-medium group-hover:text-gray-500 transition-colors">
+            <span class="font-medium group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors">
               {project.data.title}
             </span>
             {project.data.featured && (
-              <span class="text-xs text-gray-400 border border-gray-200 rounded px-1.5 py-0.5">
+              <span class="text-xs text-gray-400 dark:text-gray-500 border border-gray-200 dark:border-gray-700 rounded px-1.5 py-0.5">
                 featured
               </span>
             )}
           </div>
-          <p class="text-sm text-gray-500 mb-2">{project.data.description}</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">{project.data.description}</p>
           <ul class="flex flex-wrap gap-2">
             {project.data.tech.map((t) => (
-              <li class="text-xs text-gray-400 bg-gray-50 rounded px-2 py-1">{t}</li>
+              <li class="text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-800 rounded px-2 py-1">{t}</li>
             ))}
           </ul>
         </a>
