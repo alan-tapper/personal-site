@@ -9,17 +9,17 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 const featured = await getCollection('projects', ({ data }) => data.featured);
 ---
 
-<Base title="Your Name">
+<Base title="Alan Tapper">
   <section class="mb-20">
-    <h1 class="text-2xl font-semibold mb-3">Your Name</h1>
+    <h1 class="text-2xl font-semibold mb-3">Alan Tapper</h1>
     <p class="text-gray-600 leading-relaxed max-w-prose">
       A short bio or tagline goes here. What you work on, what you care about,
       and where you're based. Keep it to two or three sentences.
     </p>
     <div class="mt-6 flex gap-4 text-sm">
-      <a href="https://github.com" class="text-gray-500 hover:text-gray-900 transition-colors">GitHub</a>
-      <a href="https://twitter.com" class="text-gray-500 hover:text-gray-900 transition-colors">Twitter</a>
-      <a href="mailto:you@example.com" class="text-gray-500 hover:text-gray-900 transition-colors">Email</a>
+      <a href="https://github.com/alan-tapper" class="text-gray-500 hover:text-gray-900 transition-colors">GitHub</a>
+      <a href="https://www.linkedin.com/in/alan-tapper/" class="text-gray-500 hover:text-gray-900 transition-colors">LinkedIn</a>
+      <a href="mailto:tapper.alan@gmail.com" class="text-gray-500 hover:text-gray-900 transition-colors">Email</a>
     </div>
   </section>
 
