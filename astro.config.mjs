@@ -5,7 +5,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://yourname.vercel.app',
+  site: 'https://alantapper.dev',
   vite: {
     plugins: [tailwindcss()],
   },
